@@ -15,14 +15,21 @@ function tableSearch() {
       nb = tr[i].getElementsByTagName("td")[0]; //GET BAN OR NOTE
       if (td) {
         txtValue = td.textContent || td.innerText;
-        nbValue = nb.textContent || nb.innerText;
-        if (nbValue = "NOTE" && chkNote == true) {
+        nbValue = nb.textContent
+        nbValue.toString()
+        if (nbValue == "NOTE" && chkNote == true) {
             if (txtValue.toUpperCase().indexOf(filter) > -1) {
                 tr[i].style.display = "";
             } else {
                 tr[i].style.display = "none";
             }
-        }  else {tr[i].style.display = "none";}
+        }  else if (nbValue == "BAN" && chkBan == true) {
+            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                tr[i].style.display = "";
+            } else {
+                tr[i].style.display = "none";
+            }
+        } else {tr[i].style.display = "none";}
       }
     }
   }
