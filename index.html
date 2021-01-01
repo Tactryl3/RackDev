@@ -47,6 +47,11 @@
         </style>
         
         <input type="text" id="myInput" onkeyup="tableSearch()" placeholder="Search for names..">
+
+        <input type="checkbox" id="ban" name="ban" value="ban" onclick="tableSearch()" checked>
+          <label for="ban"> bans</label><br>
+        <input type="checkbox" id="note" name="note" value="note" onclick="tableSearch()" checked>
+          <label for="note"> notes</label><br>
         
         <table id='tbody'>
             <th>TYPE<td>NAME</td><td>UUID</td><td>REASON</td><td>OPERATOR</td><td>START TIME</td><td>END TIME</td></th>
