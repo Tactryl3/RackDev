@@ -10,53 +10,24 @@
         <title></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
+        <link rel="stylesheet" href="css/style.css">
         <script src="main.js"></script>
     </head>
     <body>
-        <style>
-            /*  I STOLE THIS CSS BC IM LAZY  */
-            table {
-              font-family: arial, sans-serif;
-              border-collapse: collapse;
-              width: 100%;
-            }
-            
-            td, th {
-              border: 1px solid #dddddd;
-              text-align: left;
-              padding: 8px;
-            }
-            
-            tr:nth-child(even) {
-              background-color: #dddddd;
-            }
+      
+      <input type="text" id="myInput" onkeyup="tableSearch()" placeholder="Search for names..">
 
-            /* I STOLE THIS CSS BC IM LAZY TOO */
-            #myInput {
-              background-image: url('/css/searchicon.png'); /* Add a search icon to input */
-              background-position: 10px 12px; /* Position the search icon */
-              background-repeat: no-repeat; /* Do not repeat the icon image */
-              width: 100%; /* Full-width */
-              font-size: 16px; /* Increase font-size */
-              padding: 12px 20px 12px 40px; /* Add some padding */
-              border: 1px solid #ddd; /* Add a grey border */
-              margin-bottom: 12px; /* Add some space below the input */
-            }
-
-        </style>
-        
-        <input type="text" id="myInput" onkeyup="tableSearch()" placeholder="Search for names..">
-
+      <div id="chkholder">
         <input type="checkbox" id="ban" name="ban" value="ban" onclick="tableSearch()" checked>
-          <label for="ban"> bans</label><br>
+          <label for="ban" id="banlabel">Bans</label><br>
         <input type="checkbox" id="note" name="note" value="note" onclick="tableSearch()" checked>
-          <label for="note"> notes</label><br>
-        
-        <table id='tbody'>
-            <th>TYPE<td>NAME</td><td>UUID</td><td>REASON</td><td>OPERATOR</td><td>START TIME</td><td>END TIME</td></th>
+          <label for="note" id="notelabel">Notes</label><br>
+      </div>
 
-        </table>
+      <table id='tbody'>
+          <th>TYPE<td>NAME</td><td>UUID</td><td>REASON</td><td>OPERATOR</td><td>START TIME</td><td>END TIME</td></th>
+
+      </table>
 
 
         <script src="index.js" async defer></script>
