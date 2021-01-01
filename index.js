@@ -40,7 +40,13 @@ for (var i = 0; i < apiGetPunish.length; i++) {
   if (apiGetPunish[i].punishmentType !== 'i want all of them rn') {
     var tr = "<tr>";
 
-    tr += `<td> ${apiGetPunish[i].punishmentType} </td><td> ${apiGetPunish[i].name} </td><td> ${apiGetPunish[i].uuid} </td><td> ${apiGetPunish[i].reason} </td><td> ${apiGetPunish[i].operator} </td><td> ${timeConverter(apiGetPunish[i].start)} </td><td> ${timeConverter(apiGetPunish[i].end)}</tr>`;
+    tr += `<td> ${apiGetPunish[i].punishmentType} </td>
+    <td> ${apiGetPunish[i].name} </td>
+    <td> ${apiGetPunish[i].uuid} </td>
+    <td> ${apiGetPunish[i].reason} </td>
+    <td> ${apiGetPunish[i].operator} </td>
+    <td> ${timeConverter(apiGetPunish[i].start)} </td>
+    <td> ${timeConverter(apiGetPunish[i].end)}</tr>`;
 
     tbody.innerHTML += tr;
   }
